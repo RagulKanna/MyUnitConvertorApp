@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConvertFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/cardView"
+        android:layout_marginTop="10dp">
+
+        <Spinner
+            android:id="@+id/mainMetricSpinner"
+            android:layout_width="310dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/round_box_shape"
+            android:focusable="true"
+            android:textAlignment="center"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Spinner
+            android:id="@+id/inputMetricSpinner"
+            android:layout_width="140dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/mainMetricSpinner"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/round_box_shape"
+            android:focusable="true"
+            android:textAlignment="center"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Spinner
+            android:id="@+id/outputMetricSpinner"
+            android:layout_width="140dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/mainMetricSpinner"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@+id/inputMetricSpinner"
+            android:background="@drawable/round_box_shape"
+            android:focusable="true"
+            android:textAlignment="center"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <EditText
+            android:id="@+id/inputValue"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/inputMetricSpinner"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="31dp"
+            android:background="@drawable/round_box_shape"
+            android:cursorVisible="true"
+            android:focusable="true"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/outputValue"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/outputMetricSpinner"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="30dp"
+            android:layout_toEndOf="@+id/inputValue"
+            android:background="@drawable/round_box_shape"
+            android:cursorVisible="false"
+            android:focusable="true"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:importantForAutofill="no"
+            android:maxLength="7"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/convert_button"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/inputValue"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/convert_icon"
+            android:clickable="true"
+            android:contentDescription="TODO"
+            android:focusable="true"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/convert_text"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/convert_button"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="casual"
+            android:text="@string/convert"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/reset_button"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/outputValue"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="30dp"
+            android:layout_toEndOf="@+id/convert_button"
+            android:background="@drawable/reset_icon"
+            android:clickable="true"
+            android:focusable="true"
+            tools:ignore="SpeakableTextPresentCheck"
+            android:contentDescription="@string/convert" />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/reset_button"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/convert_text"
+            android:fontFamily="casual"
+            android:text="reset"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+</FrameLayout>
