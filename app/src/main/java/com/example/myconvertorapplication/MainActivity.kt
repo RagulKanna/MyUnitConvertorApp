@@ -1,9 +1,11 @@
 package com.example.myconvertorapplication
 
 import android.os.Bundle
+import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import android.widget.TextView
 
 
 class MainActivity : AppCompatActivity() {
@@ -19,7 +21,6 @@ class MainActivity : AppCompatActivity() {
 
             replaceFragment(ConvertFragment())
         }
-
         addQuantity.setOnClickListener(){
 
             replaceFragment(AddQuantityFragment())

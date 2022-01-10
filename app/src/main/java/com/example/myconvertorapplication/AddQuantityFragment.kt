@@ -185,7 +185,7 @@ class AddQuantityFragment : Fragment() {
                         convertFunction.calculatingVolumeMetrics(selectedInput1, selectedInput2, value1)
                     val value3 = value2 + partialResult
                     val result =
-                        convertFunction.calculatingLengthMetrics(selectedInput2, selectedInput3, value3)
+                        convertFunction.calculatingVolumeMetrics(selectedInput2, selectedInput3, value3)
                     output.text = result.toString()
                 }
                 MetricConstant.METRIC_TEMPERATURE -> {
@@ -198,7 +198,7 @@ class AddQuantityFragment : Fragment() {
                     )
                     val value3 = value2 + partialResult
                     val result =
-                        convertFunction.calculatingLengthMetrics(selectedInput2, selectedInput3, value3)
+                        convertFunction.calculatingTemperatureMetrics(selectedInput2, selectedInput3, value3)
                     output.text = result.toString()
                 }
             }
@@ -206,5 +206,3 @@ class AddQuantityFragment : Fragment() {
         return view
     }
 }
-
-
